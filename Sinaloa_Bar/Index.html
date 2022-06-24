@@ -20,24 +20,28 @@
         <div class="imagen-formulario">
 
         </div>
+<<<<<<< HEAD
+        <form class="formulario" action = "validacion.php" method="post">
+=======
         <form class="formulario"action = "validacion.php" method="post">
+>>>>>>> dfafa118dd1b15294127ccbe6204624ce925b1d4
             <div class="texto-formulario">
                 <h2>Sinaloa Bar ISD</h2>
                 <p>Iniciar sesión</p>
             </div>
             <div class="input">
-                <label for="correo">Correo Electrónico</label>
-                <input placeholder="Ingrese correo electrónico" type="email" id="correo">
+                <label>Numero de identificación</label>
+                <input placeholder="Ingrese numero de identificación" type="number" name="user">
             </div>
             <div class="input">
-                <label for="contraseña">Contraseña</label>
-                <input placeholder="Ingrese contraseña" type="password" id="contraseña">
+                <label>Contraseña</label>
+                <input placeholder="Ingrese contraseña" type="password" name="pass">
             </div>
             <div class="password-olvidada">
                 <a href="#">¿Olvidar contraseña?</a>
             </div>
             <div class="input">
-                <input type="button" onclick="alerta()" value="Enviar">
+                <input type="submit" onclick="alerta()" value="Enviar">
             </div>
         </form>
     </div>

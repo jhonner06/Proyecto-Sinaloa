@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinaloa Bar</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    
+    <header>
+        <div class="icon__menu">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+    </header>
+
+    <div class="menu__side" id="menu_side">
+
+        <div class="name__page">
+            <i class="fa-regular fa-circle-user"></i>
+            <h4>Administrador</h4>
+        </div>
+
+        <div class="options__menu">	
+
+            <a href="#" class="selected">
+                <div class="option">
+                    <i class="fa-solid fa-magnifying-glass" title="Consultar"></i>
+                    <h4>Consultar</h4>
+                </div>
+            </a>
+
+            <a href="perfil.php">
+                <div class="option">
+                    <i class="fa-regular fa-id-badge" title="Perfiles"></i>
+                    <h4>Perfiles</h4>
+                </div>
+            </a>
+            
+            <a href="#">
+                <div class="menu">
+                    <i class="fa-regular fa-id-badge" title="Registrar"></i>
+                    <li><a href="#">Registrar</a>
+                        <ul class="submenu">
+                            <li><a href="Entradas.html">Entradas</a></li>
+                            <li><a href="Salidas.html">Salidas</a></li><br>
+                        </ul>
+                    </li>
+                </div>
+            </a><br>
+            
+            <a href="login.html">
+                <div class="option">
+                    <i class="fa-solid fa-arrow-right-from-bracket" title="Salir"></i>
+                    <h4>Salir</h4>
+                </div>
+            </a>
+            
+            
+
+        </div>
+
+    </div>
+
+    <main>
+        <h1>Producto</h1><br>
+        <table class="table">
+            <tr>
+                <td>Cervezas</td>
+                <td><a href="DetallesCervezas.html">Detalle</a></td>
+            </tr>
+            <tr>
+                <td>Licores</td>
+                <td><a href="DetallesLicores.html">Detalle</a></td>
+            </tr>
+            <tr>
+                <td>Gaseosas</td>
+                <td><a href="DetallesGaseosas.html">Detalle</a></td>
+            </tr>
+            <tr>
+                <td>Aguas</td>
+                <td><a href="DetallesAguas.html">Detalle</a></td>
+            </tr>
+        </table>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
