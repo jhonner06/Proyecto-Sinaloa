@@ -69,7 +69,7 @@
 
     </div>
     <main>
-        <button type="button" style="transform: translate(335px);"class="btn btn-danger"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Añadir producto</button>
+        <button type="button" style="transform: translate(335px);" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Añadir producto</button>
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
@@ -139,7 +139,7 @@
                                 </div><br>
                                 <input style="WIDTH: 300px"size=32 type="number" class="form-control mb-3" name="precio_unitario" placeholder="Precio">
                                 
-                                <input type="submit" class="btn btn-primary"><p>
+                                <input type="submit" class="btn btn-outline-success"><p>
                             </form>
                                     </div>
                                   </div>
@@ -190,6 +190,21 @@ modalBodyInput.value = recipient
 })
 
 </script>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #D1F2EB;
+}
+</style>
             <div class="container mt-5">
                 <div class="row"> 
                     
@@ -225,8 +240,8 @@ modalBodyInput.value = recipient
                                             <th><?php  echo $row['fk_marca']?></th> 
                                             <th><?php  echo $row['fk_tproduc']?></th>
                                             <th><?php  echo $row['precio_unitario']?></th>
-                                            <th><a href="../../funciones/funcLicorEB/ACTUALIZAR2.php?id=<?php echo $row['nombre'] ?>" class="btn btn-info">Editar</a></th>
-                                            <th><a href="../../funciones/funcLicorEB/DELETE2.php?id=<?php echo $row['nombre'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+                                            <th><a href="../../funciones/funcLicorEB/ACTUALIZAR2.php?id=<?php echo $row['nombre'] ?>" class="btn btn-outline-secondary">Editar</a></th>
+                                            <th><a href="../../funciones/funcLicorEB/DELETE2.php?id=<?php echo $row['nombre'] ?>" class="btn btn-outline-danger">Eliminar</a></th>                                        
                                         </tr>
                                     <?php 
                                         }
