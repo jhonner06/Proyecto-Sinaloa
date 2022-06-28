@@ -159,7 +159,7 @@ tr:nth-child(even){
 .submenu li a{
     display: block;
     padding: 4px;
-    color: #fff;
+    color: rgb(107, 253, 246);
     font-family: 'Open sans';
     text-decoration: none;
 }

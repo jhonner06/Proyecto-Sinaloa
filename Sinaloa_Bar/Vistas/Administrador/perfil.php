@@ -79,7 +79,7 @@
     </div>
 
         <main>
-        <button type="button" style="transform: translate(335px);"class="btn btn-danger"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Agregar empleado</button>
+        <button type="button" style="transform: translate(335px);" class="btn btn-outline-success"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Agregar empleado</button>
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
@@ -112,7 +112,7 @@
                                 <input style="WIDTH: 300px"size=32 type="number" class="form-control mb-3" name="telefono" placeholder="Télefono">
                                 <input style="WIDTH: 300px"size=32 type="text" class="form-control mb-3" name="sexo" placeholder="Sexo">
                                 
-                                <input type="submit" class="btn btn-primary"><p>
+                                <input type="submit" class="btn btn-outline-success"><p>
                             </form>
                                     </div>
                                   </div>
@@ -161,11 +161,26 @@ modalBodyInput.value = recipient
 })
 
 </script>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #D1F2EB;
+}
+</style>
             <div class="container mt-5">
                 <div class="row"> 
                     
                     <div class="col-md-8">
-                        <table class="table" >
+                        <table class="table">
                             <thead class="table-success table-striped" >
                                 <tr>
                                     <div text-align>
@@ -202,8 +217,8 @@ modalBodyInput.value = recipient
                                             <th><?php  echo $row['direccion']?></th>
                                             <th><?php  echo $row['telefono']?></th>   
                                             <th><?php  echo $row['sexo']?></th> 
-                                            <th><a href="../../funciones/funcPerfil/actualizar.php?id=<?php echo $row['id_persona'] ?>" class="btn btn-info">Editar</a></th>
-                                            <th><a href="../../funciones/funcPerfil/delete.php?id=<?php echo $row['id_persona'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+                                            <th><a href="../../funciones/funcPerfil/actualizar.php?id=<?php echo $row['id_persona'] ?>" class="btn btn-outline-secondary">Editar</a></th>
+                                            <th><a href="../../funciones/funcPerfil/delete.php?id=<?php echo $row['id_persona'] ?>" class="btn btn-outline-danger">Eliminar</a></th>                                        
                                         </tr>
                                     <?php 
                                         }
