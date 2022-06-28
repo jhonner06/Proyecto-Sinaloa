@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iniciar Sesión</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Source+Sans+Pro:wght@200&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css1/estilos1.css">
 </head>
 
@@ -20,11 +19,7 @@
         <div class="imagen-formulario">
 
         </div>
-<<<<<<< HEAD
-        <form class="formulario" action = "validacion.php" method="post">
-=======
-        <form class="formulario"action = "validacion.php" method="post">
->>>>>>> dfafa118dd1b15294127ccbe6204624ce925b1d4
+        <form class="formulario" action = "funciones/validacion.php" method="post">
             <div class="texto-formulario">
                 <h2>Sinaloa Bar ISD</h2>
                 <p>Iniciar sesión</p>
@@ -38,10 +33,10 @@
                 <input placeholder="Ingrese contraseña" type="password" name="pass">
             </div>
             <div class="password-olvidada">
-                <a href="#">¿Olvidar contraseña?</a>
+                <a href="Vistas/recover_pass.php">¿Olvidaste tu contraseña?</a>
             </div>
             <div class="input">
-                <input type="submit" onclick="alerta()" value="Enviar">
+                <input type="submit" onclick="alerta()" value="Enviar" >
             </div>
         </form>
     </div>
@@ -49,10 +44,10 @@
     <script type="text/javascript">
         function alerta(){
             
-            let email = document.getElementById('correo').value;
-            let password = document.getElementById('contraseña').value;
+            let user = document.getElementById('user').value;
+            let pass = document.getElementById('pass').value;
 
-            if(email === "" || password === ""){
+            if(user == "" || pass == ""){
                 swal("Usuario o contraseña inválida ", "", "error");
             }else{
                 swal("Ha iniciado sesión con Éxito ", "", "success");   

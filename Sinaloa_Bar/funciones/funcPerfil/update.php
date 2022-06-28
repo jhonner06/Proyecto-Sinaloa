@@ -1,6 +1,6 @@
 <?php
 
-include("CONEXION1.php");
+include("../../conexion/CONEXION1.php");
 $con=conectar();
 
 
@@ -14,6 +14,6 @@ $sql="UPDATE persona SET pk_fk_tdoc='$pk_fk_tdoc',contrasena='$contrasena',direc
 $query=mysqli_query($con,$sql);
 
     if($query){
-        Header("Location: perfil.php");
+        Header("Location: ../../Vistas/perfil.php");
     }
 ?>

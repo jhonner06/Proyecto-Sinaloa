@@ -1,5 +1,5 @@
 <?php
-include("CONEXION1.php");
+include("../../conexion/CONEXION1.php");
 $con=conectar();
 
 $pk_fk_tdoc=$_POST['pk_fk_tdoc'];
@@ -20,7 +20,7 @@ VALUES('$pk_fk_tdoc','$id_persona','$contrasena','$p_nombre','$s_nombre','$p_ape
 $query= mysqli_query($con,$sql);
 
 if($query){
-    Header("Location: perfil.php");
+    Header("Location: ../../Vistas/perfil.php");
     
 }else {
 }
