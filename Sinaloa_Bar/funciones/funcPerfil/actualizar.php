@@ -1,5 +1,5 @@
 <?php 
-    include("CONEXION1.php");
+    include("../../conexion/CONEXION1.php");
     $con=conectar();
 
 $id=$_GET['id'];
@@ -26,10 +26,19 @@ $row=mysqli_fetch_array($query);
                     <form action="update.php" method="POST">
                     
                                 <input type="hidden" name="id_persona" value="<?php echo $row['id_persona']?>">
-                                
-                                <input type="text" class="form-control mb-3" name="pk_fk_tdoc" placeholder="pk_fk_tdoc" value="<?php echo $row['pk_fk_tdoc']?>"></input>
+                                <div>
+                                <label>Tipo de documento:</label>
+                                <select name="pk_fk_tdoc" id="pk_fk_tdoc">
+                                <option value="CC">Cedula Ciudadania</option>
+                                <option value="CE">Cédula de Extranjería</option>
+                                <option value="TI">Tarjeta de Identidad</option>
+                                </select>
+                                </div><br>
+                                <label>Contraseña:</label>
                                 <input type="password" class="form-control mb-3" name="contrasena" placeholder="contrasena" value="<?php echo $row['contrasena']?>"></input>
+                                <label>Dirección:</label>
                                 <input type="text" class="form-control mb-3" name="direccion" placeholder="direccion" value="<?php echo $row['direccion']?>"></input>
+                                <label>Telefono:</label>
                                 <input type="text" class="form-control mb-3" name="telefono" placeholder="telefono" value="<?php echo $row['telefono']?>">
                                 
                             <input type="submit" class="btn btn-primary btn-block" value="Actualizar">

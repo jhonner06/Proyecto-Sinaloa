@@ -1,5 +1,5 @@
 <?php 
-    include("CONEXION1.php");
+    include("../conexion/CONEXION1.php");
     $con=conectar();
 
     $sql="SELECT *  FROM persona";
@@ -12,14 +12,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Perfiles</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets/css/untitled.css">
-    <link rel="stylesheet" href="css/estilos1.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="../assets/css/untitled.css">
+    <link rel="stylesheet" href="../css/estilos1.css">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -58,14 +58,14 @@
                     <i class="fa-regular fa-id-badge" title="Registrar"></i>
                     <li><a href="#">Registrar</a>
                         <ul class="submenu">
-                            <li><a href="Entradas.html">Entradas</a></li>
-                            <li><a href="Salidas.html">Salidas</a></li>
+                            <li><a href="../Entradas.html">Entradas</a></li>
+                            <li><a href="../Salidas.html">Salidas</a></li>
                         </ul>
                     </li>
                 </div><br>
             </a><br>
             
-            <a href="Index.html">
+            <a href="../Index.html">
                 <div class="option">
                     <i class="fa-solid fa-arrow-right-from-bracket" title="Salir"></i>
                     <h4>Salir</h4>
@@ -79,7 +79,7 @@
     </div>
 
         <main>
-        <button type="button" style="transform: translate(335px);"class="btn btn-danger"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Añadir producto</button>
+        <button type="button" style="transform: translate(335px);"class="btn btn-danger"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Agregar empleado</button>
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
@@ -88,16 +88,26 @@
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="col-md-3">
-                            <form action="insertar.php" method="POST">
-                                
-                                <input style="WIDTH: 300px"size=32 trantype="text" class="form-control mb-3" name="pk_fk_tdoc" placeholder="Tipo Documento">
-                                <input style="WIDTH: 300px"size=32 type="text" class="form-control mb-3" name="id_persona" placeholder="Numero de Cedula">
-                                <input style="WIDTH: 300px"size=32 type="password" class="form-control mb-3" name="contrasena" placeholder="Conraseña">
+                            <form action="../funciones/funcPerfil/insertar.php" method="POST">
+                                <div>
+                                <select name="pk_fk_tdoc" id="pk_fk_tdoc">
+                                <option value="CC">Cedula Ciudadania</option>
+                                <option value="CE">Cédula de Extranjería</option>
+                                <option value="TI">Tarjeta de Identidad</option>
+                                </select>
+                                </div><br>
+                                <input style="WIDTH: 300px"size=32 type="text" class="form-control mb-3" name="id_persona" placeholder="Número de Cédula">
+                                <input style="WIDTH: 300px"size=32 type="password" class="form-control mb-3" name="contrasena" placeholder="Contraseña">
                                 <input style="WIDTH: 300px"size=32 type="text" class="form-control mb-3" name="p_nombre" placeholder="Primer Nombre">
                                 <input style="WIDTH: 300px"size=32 type="text" class="form-control mb-3" name="s_nombre" placeholder="Segundo Nombre">
                                 <input style="WIDTH: 300px"size=32 type="text" class="form-control mb-3" name="p_apellido" placeholder="Primer Apellido">
                                 <input style="WIDTH: 300px"size=32 type="text" class="form-control mb-3" name="s_apellido" placeholder="Segundo Aellido">
-                                <input style="WIDTH: 300px"size=32 type="text" class="form-control mb-3" name="fk_rol" placeholder="Rol del Empleado">
+                                <div>
+                                <select name="fk_rol" id="fk_rol">
+                                <option value="1">Administrador</option>
+                                <option value="2">Encargado de barra</option>
+                                </select>
+                                </div><br>
                                 <input style="WIDTH: 300px"size=32 type="text" class="form-control mb-3" name="direccion" placeholder="Dirección">
                                 <input style="WIDTH: 300px"size=32 type="number" class="form-control mb-3" name="telefono" placeholder="Télefono">
                                 <input style="WIDTH: 300px"size=32 type="text" class="form-control mb-3" name="sexo" placeholder="Sexo">
@@ -113,13 +123,15 @@
                 </div>
                 <footer class="bg-white sticky-footer">
                     <div class="container my-auto">
-                        <div class="text-center my-auto copyright"><span></span></div>
+                        <div class="text-center my-auto copyright"><span></span>
+                        <h1>Perfiles</h1>
+                    </div>
                     </div>
                 </footer>
             </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
         </div>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/theme.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/theme.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>
@@ -159,7 +171,7 @@ modalBodyInput.value = recipient
                                     <div text-align>
                                     <th>Tipo Documento</th>
                                 </div>
-                                    <th>Numero </th>
+                                    <th>Número de Cédula</th>
                                     <th type="password">Contraseña</th>
                                     <th>Primer Nombre</th>
                                     <th>Segundo Nombre</th>
@@ -190,8 +202,8 @@ modalBodyInput.value = recipient
                                             <th><?php  echo $row['direccion']?></th>
                                             <th><?php  echo $row['telefono']?></th>   
                                             <th><?php  echo $row['sexo']?></th> 
-                                            <th><a href="actualizar.php?id=<?php echo $row['id_persona'] ?>" class="btn btn-info">Editar</a></th>
-                                            <th><a href="delete.php?id=<?php echo $row['id_persona'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+                                            <th><a href="../funciones/funcPerfil/actualizar.php?id=<?php echo $row['id_persona'] ?>" class="btn btn-info">Editar</a></th>
+                                            <th><a href="../funciones/funcPerfil/delete.php?id=<?php echo $row['id_persona'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
                                         </tr>
                                     <?php 
                                         }
@@ -201,11 +213,11 @@ modalBodyInput.value = recipient
                     </div>
                 </div>  
         </div>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/theme.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../assets/js/theme.js"></script>
     </main>
         
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
          
 </body>
 
