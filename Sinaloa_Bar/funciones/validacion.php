@@ -54,13 +54,13 @@ class bar
 			if(@$role == 1)
 			{
 				$_SESSION['active']=1;
-				header('Location: ../Vistas/consultar.html');
+				header('Location: ../Vistas/Administrador/consultar.html');
 			}
 
 			elseif (@$role == 2)
 			{
 				$_SESSION['active']=1;
-				header('Location: Vistas/index_Doc.php');
+				header('Location: ../Vistas/Encargado_barra/consultar.html');
 			}
 
 		}

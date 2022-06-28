@@ -17,6 +17,6 @@ $sql="UPDATE producto SET id_producto='$id_producto',cantidad='$cantidad',/*stoc
 $query=mysqli_query($con,$sql);
 
     if($query){
-        Header("Location: ../../Vistas/DetallesGaseosas.php");
+        Header("Location: ../../Vistas/Administrador/DetallesGaseosas.php");
     }
 ?>

@@ -19,7 +19,7 @@ VALUES('$id_producto','$cantidad',/*'$stock_max','$stock_min',*/'$nombre','$fk_m
 $query= mysqli_query($con,$sql);
 
 if($query){
-    Header("Location: ../../Vistas/DetallesGaseosas.php");
+    Header("Location: ../../Vistas/Administrador/DetallesGaseosas.php");
     
 }else {
 }

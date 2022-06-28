@@ -1,5 +1,5 @@
 <?php 
-    include("../conexion/CONEXION2.php");
+    include("../../conexion/CONEXION2.php");
     $con=conectar();
 
     $sql="SELECT *  FROM producto";
@@ -11,14 +11,14 @@
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Detalles Cerveza</title>
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="../assets/css/untitled.css">
-    <link rel="stylesheet" href="../css/estilos1.css">
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="../../assets/css/untitled.css">
+    <link rel="stylesheet" href="../../css/estilos1.css">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 <body  id="body">
@@ -32,7 +32,7 @@
 
         <div class="name__page">
             <i class="fa-regular fa-circle-user"></i>
-            <h4>Administrador</h4>
+            <h4>Encargado de Barra</h4>
         </div>
 
         <div class="options__menu">	
@@ -43,15 +43,8 @@
                     <h4>Consultar</h4>
                 </div>
             </a>
-
-            <a href="perfil.php">
-                <div class="option">
-                    <i class="fa-regular fa-id-badge" title="Perfiles"></i>
-                    <h4>Perfiles</h4>
-                </div>
-            </a>
             
-            <a href="#">
+            <!--<a href="#">
                 <div class="menu">
                     <i class="fa-regular fa-id-badge" title="Registrar"></i>
                     <li><a href="#">Registrar</a>
@@ -61,9 +54,9 @@
                         </ul>
                     </li>
                 </div><br>
-            </a><br>
+            </a><br>-->
             
-            <a href="../Index.html">
+            <a href="../../Index.html">
                 <div class="option">
                     <i class="fa-solid fa-arrow-right-from-bracket" title="Salir"></i>
                     <h4>Salir</h4>
@@ -85,7 +78,7 @@
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="col-md-3">
-                            <form action="../funciones/funcCervezas/INSERTAR1.php" method="POST">
+                            <form action="../../funciones/funcCervezasEB/INSERTAR1.php" method="POST">
                                 
                                 <input style="WIDTH: 300px"size=32 trantype="number" class="form-control mb-3" name="id_producto" placeholder="Codigo Producto">
                                 <input style="WIDTH: 300px"size=32 type="number" class="form-control mb-3" name="cantidad" placeholder="Cantidad de producto ha ingresar">
@@ -146,7 +139,7 @@
                                 </div><br>
                                 <input style="WIDTH: 300px"size=32 type="number" class="form-control mb-3" name="precio_unitario" placeholder="Precio">
                                 
-                                <input type="submit" class="btn btn-primary">
+                                <input type="submit" class="btn btn-primary"><p>    
                             </form>
                                     </div>
                                   </div>
@@ -166,8 +159,8 @@
                 </footer>
             </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
         </div>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/js/theme.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/theme.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>
@@ -201,7 +194,7 @@ modalBodyInput.value = recipient
                 <div class="row"> 
                     
                     <div class="col-md-8">
-                        <table class="table" >
+                        <table class="table">
                             <thead class="table-success table-striped" >
                                 <tr>
                                     <div text-align>
@@ -232,8 +225,8 @@ modalBodyInput.value = recipient
                                             <th><?php  echo $row['fk_marca']?></th> 
                                             <th><?php  echo $row['fk_tproduc']?></th>
                                             <th><?php  echo $row['precio_unitario']?></th>
-                                            <th><a href="../funciones/funcCervezas/ACTUALIZAR1.php?id=<?php echo $row['nombre'] ?>" class="btn btn-info">Editar</a></th>
-                                            <th><a href="../funciones/funcCervezas/DELETE1.php?id=<?php echo $row['nombre'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+                                            <th><a href="../../funciones/funcCervezasEB/ACTUALIZAR1.php?id=<?php echo $row['nombre'] ?>" class="btn btn-info">Editar</a></th>
+                                            <th><a href="../../funciones/funcCervezasEB/DELETE1.php?id=<?php echo $row['nombre'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
                                         </tr>
                                     <?php 
                                         }
@@ -243,10 +236,10 @@ modalBodyInput.value = recipient
                     </div>
                 </div>  
         </div>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="../assets/js/theme.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/theme.js"></script>
     </main>
         
-    <script src="../js/script.js"></script>
+    <script src="../../js/script.js"></script>
 </body>
 </html>
