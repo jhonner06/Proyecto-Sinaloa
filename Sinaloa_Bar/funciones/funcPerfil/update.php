@@ -14,6 +14,6 @@ $sql="UPDATE persona SET pk_fk_tdoc='$pk_fk_tdoc',contrasena='$contrasena',direc
 $query=mysqli_query($con,$sql);
 
     if($query){
-        Header("Location: ../../Vistas/perfil.php");
+        Header("Location: ../../Vistas/Administrador/perfil.php");
     }
 ?>

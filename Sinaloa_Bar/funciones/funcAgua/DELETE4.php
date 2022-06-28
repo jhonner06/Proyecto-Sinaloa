@@ -9,6 +9,6 @@ $sql="DELETE FROM producto  WHERE nombre='$nombre'";
 $query=mysqli_query($con,$sql);
 
     if($query){
-        Header("Location: ../../Vistas/DetallesAguas.php");
+        Header("Location: ../../Vistas/Administrador/DetallesAguas.php");
     }
 ?>

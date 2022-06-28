@@ -17,6 +17,6 @@ $sql="UPDATE producto SET id_producto='$id_producto',cantidad='$cantidad',/*stoc
 $query=mysqli_query($con,$sql);
 
     if($query){
-        Header("Location: ../../Vistas/Administrador/DetallesAguas.php");
+        Header("Location: ../../Vistas/Encargado_barra/DetallesCervezas.php");
     }
 ?>

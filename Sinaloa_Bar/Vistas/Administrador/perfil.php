@@ -1,5 +1,5 @@
 <?php 
-    include("../conexion/CONEXION1.php");
+    include("../../conexion/CONEXION1.php");
     $con=conectar();
 
     $sql="SELECT *  FROM persona";
@@ -12,14 +12,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Perfiles</title>
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="../assets/css/untitled.css">
-    <link rel="stylesheet" href="../css/estilos1.css">
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="../../assets/css/untitled.css">
+    <link rel="stylesheet" href="../../css/estilos1.css">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -53,19 +53,19 @@
                     <h4>Perfiles</h4>
                 </div>
             </a>
-            <a href="#">
+            <!--<a href="#">
                 <div class="menu">
                     <i class="fa-regular fa-id-badge" title="Registrar"></i>
                     <li><a href="#">Registrar</a>
                         <ul class="submenu">
-                            <li><a href="../Entradas.html">Entradas</a></li>
-                            <li><a href="../Salidas.html">Salidas</a></li>
+                            <li><a href="../../Entradas.html">Entradas</a></li>
+                            <li><a href="../../Salidas.html">Salidas</a></li>
                         </ul>
                     </li>
                 </div><br>
-            </a><br>
+            </a><br>-->
             
-            <a href="../Index.html">
+            <a href="../../Index.html">
                 <div class="option">
                     <i class="fa-solid fa-arrow-right-from-bracket" title="Salir"></i>
                     <h4>Salir</h4>
@@ -88,7 +88,7 @@
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="col-md-3">
-                            <form action="../funciones/funcPerfil/insertar.php" method="POST">
+                            <form action="../../funciones/funcPerfil/insertar.php" method="POST">
                                 <div>
                                 <select name="pk_fk_tdoc" id="pk_fk_tdoc">
                                 <option value="CC">Cedula Ciudadania</option>
@@ -112,7 +112,7 @@
                                 <input style="WIDTH: 300px"size=32 type="number" class="form-control mb-3" name="telefono" placeholder="Télefono">
                                 <input style="WIDTH: 300px"size=32 type="text" class="form-control mb-3" name="sexo" placeholder="Sexo">
                                 
-                                <input type="submit" class="btn btn-primary">
+                                <input type="submit" class="btn btn-primary"><p>
                             </form>
                                     </div>
                                   </div>
@@ -130,8 +130,8 @@
                 </footer>
             </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
         </div>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/js/theme.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/theme.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>
@@ -202,8 +202,8 @@ modalBodyInput.value = recipient
                                             <th><?php  echo $row['direccion']?></th>
                                             <th><?php  echo $row['telefono']?></th>   
                                             <th><?php  echo $row['sexo']?></th> 
-                                            <th><a href="../funciones/funcPerfil/actualizar.php?id=<?php echo $row['id_persona'] ?>" class="btn btn-info">Editar</a></th>
-                                            <th><a href="../funciones/funcPerfil/delete.php?id=<?php echo $row['id_persona'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+                                            <th><a href="../../funciones/funcPerfil/actualizar.php?id=<?php echo $row['id_persona'] ?>" class="btn btn-info">Editar</a></th>
+                                            <th><a href="../../funciones/funcPerfil/delete.php?id=<?php echo $row['id_persona'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
                                         </tr>
                                     <?php 
                                         }
@@ -213,11 +213,11 @@ modalBodyInput.value = recipient
                     </div>
                 </div>  
         </div>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="../assets/js/theme.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/theme.js"></script>
     </main>
         
-    <script src="../js/script.js"></script>
+    <script src="../../js/script.js"></script>
          
 </body>
 

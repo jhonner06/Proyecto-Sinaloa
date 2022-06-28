@@ -20,7 +20,7 @@ VALUES('$pk_fk_tdoc','$id_persona','$contrasena','$p_nombre','$s_nombre','$p_ape
 $query= mysqli_query($con,$sql);
 
 if($query){
-    Header("Location: ../../Vistas/perfil.php");
+    Header("Location: ../../Vistas/Administrador/perfil.php");
     
 }else {
 }

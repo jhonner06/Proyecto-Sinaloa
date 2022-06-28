@@ -9,6 +9,6 @@ $sql="DELETE FROM persona  WHERE id_persona='$id_persona'";
 $query=mysqli_query($con,$sql);
 
     if($query){
-        Header("Location: ../../Vistas/perfil.php");
+        Header("Location: ../../Vistas/Administrador/perfil.php");
     }
 ?>
